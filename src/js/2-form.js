@@ -15,7 +15,6 @@ form.addEventListener('input', (event) => {
     if (formData) {
       console.log(formData)
     }
-    localStorage.removeItem(localStorageKey)
       form.reset()
   });
 
