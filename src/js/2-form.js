@@ -17,7 +17,9 @@ form.addEventListener('input', event => {
   email: event.target.elements.email.value.trim(),
   message: event.target.elements.message.value.trim()
     };
-    console.log(formData)
-    localStorage.removeItem(localStorageKey)
+    if (formData.email !== "" && formData.message !== "") {
+      console.log(formData)
+      localStorage.removeItem(localStorageKey)
       form.reset()
+    }
   });
