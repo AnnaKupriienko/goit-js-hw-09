@@ -68,8 +68,8 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-gallery.innerHTML = createMurkup(images);
-function createMurkup(images){
+gallery.innerHTML = createGalleryMarkup(images);
+function createGalleryMarkup(images){
    return images.map(({ preview, original, description }) =>
       `<li class="gallery-item">
   <a class="gallery-link" href="${original}">
@@ -86,29 +86,5 @@ const  lightbox = new SimpleLightbox('.gallery-link', {
     captionsData: 'alt',
     captionDelay: 250,
 });
-console.log(lightbox);
 
-// gallery.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   if (event.target === event.currentTarget) {
-//     return;
-//   }
-//   const card = event.target.closest(".gallery-link");
-//   if (card) {
-// const largeImg = card.getAttribute("href");
-// const descriptionImg = card.getAttribute("alt");
-//  instance = basicLightbox.create(`
-// 	<img
-//       class="gallery-image"
-//       src = "${largeImg}"
-//       alt= "${descriptionImg}"/>
-// `)
-//     instance.show()
-//   }
-//   document.addEventListener("keyup", ({ code }) => {
-//     if (code !== "Escape") {
-//       return;
-//     }
-//   instance.close()
-//   })
-// });
+
