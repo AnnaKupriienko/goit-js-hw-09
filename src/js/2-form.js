@@ -1,6 +1,5 @@
 const form = document.querySelector(".feedback-form")
 const localStorageKey = "feedback-form-state"
-const feedbackForm = localStorage.getItem(localStorageKey)
 form.addEventListener('input', (event) => {
     if (event.target.tagName.toLowerCase() === 'input') {
         localStorage.setItem('feedback-form', JSON.stringify({
